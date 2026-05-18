@@ -1,0 +1,344 @@
+/* AdminUsersPage.css */
+
+.admin-users-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f2fe 0%, #dbeafe 25%, #d1fae5 75%, #a7f3d0 100%);
+  background-attachment: fixed;
+  padding: 2rem;
+}
+
+.admin-users-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.125rem;
+  color: #6b7280;
+}
+
+.admin-users-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.admin-users-back-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: #0f172a;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.admin-users-back-button:hover {
+  background: white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.admin-users-header h1 {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.admin-users-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-users-stats {
+  margin-bottom: 2rem;
+}
+
+.admin-users-stat-card {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(226, 232, 240, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.admin-users-stat-card svg {
+  width: 48px;
+  height: 48px;
+  color: #22c55e;
+}
+
+.admin-users-stat-card h3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.admin-users-stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.admin-users-list {
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(20px) saturate(180%);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(226, 232, 240, 0.6);
+}
+
+.admin-users-list h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.admin-users-list + .admin-users-list {
+  margin-top: 2rem;
+}
+
+.admin-users-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.admin-users-table-header {
+  display: grid;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #6b7280;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.admin-users-table-header.inactive-users {
+  grid-template-columns: 2fr 2fr 1.5fr 1.5fr;
+}
+
+.admin-users-table-header.active-users {
+  grid-template-columns: 2fr 2fr 1fr 1.5fr 1.5fr;
+}
+
+.admin-users-table-row {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.admin-users-table-row.inactive-users {
+  grid-template-columns: 2fr 2fr 1.5fr 1.5fr;
+}
+
+.admin-users-table-row.active-users {
+  grid-template-columns: 2fr 2fr 1fr 1.5fr 1.5fr;
+}
+
+.admin-users-table-row:hover {
+  background-color: #f9fafb;
+}
+
+.admin-users-user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.admin-users-avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.admin-users-avatar svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.admin-users-name {
+  font-weight: 500;
+  color: #111827;
+  margin: 0 0 0.25rem 0;
+}
+
+.admin-users-role {
+  font-size: 0.75rem;
+  color: #6b7280;
+  text-transform: uppercase;
+}
+
+.admin-users-email {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.admin-users-date {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.admin-users-activate-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.admin-users-activate-button:hover {
+  background-color: #059669;
+}
+
+.admin-users-activate-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.admin-users-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #6b7280;
+}
+
+.admin-users-empty svg {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  color: #10b981;
+}
+
+.admin-users-empty h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.admin-users-empty p {
+  font-size: 1rem;
+}
+
+.admin-users-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.admin-users-action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.admin-users-action-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.admin-users-action-button.edit {
+  background-color: #22c55e;
+  color: white;
+}
+
+.admin-users-action-button.edit:hover {
+  background-color: #16a34a;
+}
+
+.admin-users-action-button.role {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.admin-users-action-button.role:hover {
+  background-color: #2563eb;
+}
+
+.admin-users-action-button.password {
+  background-color: #10b981;
+  color: white;
+}
+
+.admin-users-action-button.password:hover {
+  background-color: #059669;
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.role-badge.admin {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.role-badge.user {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+@media (max-width: 768px) {
+  .admin-users-table-header,
+  .admin-users-table-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .admin-users-table-header {
+    display: none;
+  }
+  
+  .admin-users-actions {
+    justify-self: start;
+  }
+}
